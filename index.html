@@ -9652,6 +9652,12 @@ h1 { margin: 0px; height: 91px; }
 }
 
   </style>
+  <script type="text/javascript">
+    function changeImage(){
+      document.getElementsByClassName("keyarea")[0].style.backgroundImage = "url(images/" + document.getElementById("changeimage").value + ".jpg)"
+      console.log(document.getElementById("changeimage").value);
+    }
+  </script>
 </head>
 <body onclick="SecureRandom.seedTime();" onmousemove="ninja.seeder.seed(event);">
   <div id="busyblock"></div>
@@ -9706,7 +9712,7 @@ h1 { margin: 0px; height: 91px; }
         <div id="walletCommands" class="commands">
           <div id="singlecommands" class="row">
             <span><input type="button" id="newaddress" value="Generate New Address" onclick="ninja.wallets.singlewallet.generateNewAddressAndKey();" /></span>
-            <span>change image <select name="iamges" id="changeimage">
+            <span>change image <select name="iamges" id="changeimage" onChange="changeImage();">
               <option value="WALLETBLANK">--</option>
               <option value="69_winner">winner</option>
               <option value="04_second_prize">second prize</option>
