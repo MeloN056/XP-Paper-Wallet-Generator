@@ -29,7 +29,7 @@ Bitcoin.ECKey = (function () {
 			} else if (ECKey.isBase64Format(input)) {
 				bytes = Crypto.util.base64ToBytes(input);
 			}
-			
+
 			if (ECKey.isBase6Format(input)) {
 				this.priv = new BigInteger(input, 6);
 			} else if (bytes == null || bytes.length != 32) {
@@ -127,7 +127,7 @@ Bitcoin.ECKey = (function () {
 		return this;
 	};
 
-	// Sipa Private Key Wallet Import Format 
+	// Sipa Private Key Wallet Import Format
 	ECKey.prototype.getBitcoinWalletImportFormat = function () {
 		var bytes = this.getBitcoinPrivateKeyByteArray();
 		bytes.unshift(janin.currency.privateKeyPrefix()); // prepend private key prefix
@@ -138,12 +138,12 @@ Bitcoin.ECKey = (function () {
 		return privWif;
 	};
 
-	// Private Key Hex Format 
+	// Private Key Hex Format
 	ECKey.prototype.getBitcoinHexFormat = function () {
 		return Crypto.util.bytesToHex(this.getBitcoinPrivateKeyByteArray()).toString().toUpperCase();
 	};
 
-	// Private Key Base64 Format 
+	// Private Key Base64 Format
 	ECKey.prototype.getBitcoinBase64Format = function () {
 		return Crypto.util.bytesToBase64(this.getBitcoinPrivateKeyByteArray());
 	};
@@ -151,7 +151,7 @@ Bitcoin.ECKey = (function () {
 	ECKey.prototype.getBitcoinPrivateKeyByteArray = function () {
 		// Get a copy of private key as a byte array
 		var bytes = this.priv.toByteArrayUnsigned();
-		// zero pad if private key is less than 32 bytes 
+		// zero pad if private key is less than 32 bytes
 		while (bytes.length < 32) bytes.unshift(0x00);
 		return bytes;
 	};
@@ -186,13 +186,13 @@ Bitcoin.ECKey = (function () {
 		var hash = bytes.slice(0, 33);
 		var checksum = Crypto.SHA256(Crypto.SHA256(hash, { asBytes: true }), { asBytes: true });
 		if (checksum[0] != bytes[33] ||
-					checksum[1] != bytes[34] ||
-					checksum[2] != bytes[35] ||
-					checksum[3] != bytes[36]) {
+			checksum[1] != bytes[34] ||
+			checksum[2] != bytes[35] ||
+			checksum[3] != bytes[36]) {
 			throw "Checksum validation failed!";
 		}
 		var version = hash.shift();
-        // TODO: detect currency
+		// TODO: detect currency
 		if (version != janin.currency.privateKeyPrefix()) {
 			throw "Version " + version + " not supported!";
 		}
@@ -207,13 +207,13 @@ Bitcoin.ECKey = (function () {
 		var hash = bytes.slice(0, 34);
 		var checksum = Crypto.SHA256(Crypto.SHA256(hash, { asBytes: true }), { asBytes: true });
 		if (checksum[0] != bytes[34] ||
-					checksum[1] != bytes[35] ||
-					checksum[2] != bytes[36] ||
-					checksum[3] != bytes[37]) {
+			checksum[1] != bytes[35] ||
+			checksum[2] != bytes[36] ||
+			checksum[3] != bytes[37]) {
 			throw "Checksum validation failed!";
 		}
 		var version = hash.shift();
-        // TODO: detect currency
+		// TODO: detect currency
 		if (version != janin.currency.privateKeyPrefix()) {
 			throw "Version " + version + " not supported!";
 		}

@@ -2,19 +2,19 @@
 .less { background: url("./images/minus.png") no-repeat left center; width: 17px; height: 17px; display: inline-block; float: right; }
 a { position: relative; z-index: 20; text-decoration: none; color: #d58424; }
 .right { text-align: right; }
-.walletarea { display: none; border: 1px solid #BFBFBF; background-color: white; }
+.walletarea { display: none; border: 0px solid #BFBFBF; height: 469px; width: 1080px;}
 hr { margin: 20px 0; border-top: 1px dashed #008000; }
-.keyarea { height: 110px; text-align: left; position: relative; padding: 25px 25px 10px; }
-.keyarea .public { float: left; }
-.keyarea .pubaddress { display: inline-block; height: 40px; padding: 0 0 0 10px; float: left; }
-.keyarea .privwif { margin: 0;  float: right; text-align: right; padding: 0 20px 0 0; position: relative; }
+.keyarea { height: 469px; width: 1080px; background-image: url(images/69_winner.jpg); text-align: left; position: relative; padding: 0px 0px 0px; }
+.keyarea .public { float: left;}
+.keyarea .pubaddress { display: inline-block; width: 140px; position: relative; top: 176px; left: 107px; float: left; word-wrap: break-word;}
+.keyarea .privwif { display: inline-block; width: 140px; position: relative; top: 145px; left: 695px; float: left; word-wrap: break-word;}
 .keyarea .label { font-weight: bold; }
 .keyarea .output { display: block; font-family: monospace; font-size: 1.25em; }
 .keyarea .qrcode_public { display: inline-block; float: left; }
 .keyarea .qrcode_private { display: inline-block; position: relative; top: 28px; float: right; }
 .pubkeyhex { word-wrap: break-word; }
 html { height: 100%; }
-body { font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif"; background-image: url('images/BACKGROUND.jpg'); height: 100%; }
+body { font-family: Arial; background-image: url('images/BACKGROUND.jpg'); height: 100%; }
 .faqs ol { padding: 0 0 0 25px; }
 .faqs li { padding: 3px 0; }
 .question { padding: 10px 15px; text-align: left; cursor: pointer; }
@@ -35,7 +35,7 @@ body { font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Bla
 #btcaddress, #btcprivwif, #detailaddress, #detailaddresscomp, #detailprivwif, #detailprivwifcomp { font-family: monospace; font-size: 1.25em; }
 #seedpoolarea { display: none; }
 #seedpooldisplay {  font-family: monospace; font-size: 1em; width: 640px; padding: 15px 5px; word-wrap: break-word; min-height: 98px; }
-.seedpoint { width: 0px; height: 0px; border-radius: 0px; background-color: #80CF80; position: absolute; z-index: 10; opacity: 0%; }
+.seedpoint { width: 0px; height: 0px; display: block; border-radius: 0px; background-color: #80CF80; position: absolute; z-index: 10; }
 
 #seedSkipper { font-size: 11px; text-align: center; line-height: 14px;}
 #skipMessage { margin-top: 8px; }
@@ -44,10 +44,10 @@ body { font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Bla
 #rightArea { position: absolute; right: 66px; top: 62px; width: 170px; }
 #progress-bar { width: 170px; background:#80CF80; position: relative; margin-bottom: 20px;
   -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
- }
+}
 #progress-bar-percentage { background:#FFA247; padding: 3px 0px; text-align: center; height: 18px;
   -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
- }
+}
 #progress-bar-percentage span { display: inline-block; position: absolute; width: 100%; left: 0; }
 .nicerButton { font-size: 14px; }
 
@@ -61,14 +61,14 @@ body { font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Bla
 
 h1 { margin: 0px; height: 91px; }
 
-#keyarea { height: 497px; border-bottom: 1px solid #bfbfbf; }
-#keyarea .pubaddress { float: none; display: block; padding: 0; height: auto; }
+#keyarea { height: 469px; border-bottom: 1px solid #bfbfbf; }
+#keyarea .pubaddress { float: none; display: block; height: auto; }
 #keyarea .label { text-decoration: none; }
-#keyarea .privwif { float: none; text-align: right; position: relative; padding: 0; }
-#keyarea .qrcode_public { float: none; display: block; padding: 13px 11px 11px 11px; }
-#keyarea .qrcode_private { float: none; display: block; top: 0; text-align: right; padding: 13px 11px 11px 11px; }
-#keyarea .private { width: 30%; display: table-cell; }
-#keyarea .public { width: 30%; display: table-cell; }
+#keyarea .privwif { float: none; text-align: right; position: relative;}
+#keyarea .qrcode_public { float: none; display: block; position: relative; left: 108px; top: 166px; width: 100px;}
+#keyarea .qrcode_private { float: none; display: block; position: relative; top: 153px; left: 673px; text-align: right; padding: 13px 11px 11px 11px; }
+#keyarea .private { display: table-cell; }
+#keyarea .public { display: table-cell; }
 #singlearea { font-size: 90%; display: block; }
 #singlesecret { position: relative; top: -130px; float: right; right: 200px; color: red; font-weight: bolder; font-size: 200%;  }
 #singleshare { position: relative; top: -110px; float: left; left: 160px; color: green; font-weight: bolder; font-size: 200%;  }
@@ -81,18 +81,18 @@ h1 { margin: 0px; height: 91px; }
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;         /* Opera/IE 8+ */
   display: inline-block;
-    vertical-align: top;
-    position: relative;
+  vertical-align: top;
+  position: relative;
 }
 
 .firstHalfSingleSafety { width: 50%; padding: 10px 30px 10px 30px; }
 
- .secondHalfSingleSafety {
-    width: 50%;
-    padding: 20px;
-    text-align: center;
-    float: right;
- }
+.secondHalfSingleSafety {
+  width: 50%;
+  padding: 20px;
+  text-align: center;
+  float: right;
+}
 
 .frontPageImage, .seedFrontPageImage {
   -webkit-border-radius: 10px;
@@ -107,8 +107,8 @@ h1 { margin: 0px; height: 91px; }
 .securityChecklist {
   background-color: #FFE6C9;
   margin-top: 15px;
-    padding: 20px;
-    -webkit-border-radius: 10px;
+  padding: 20px;
+  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
   text-align: left;
@@ -118,8 +118,8 @@ h1 { margin: 0px; height: 91px; }
   background-color: #C2F2C3;
   margin-top: 10px;
   margin-bottom: 10px;
-    padding: 20px;
-    -webkit-border-radius: 10px;
+  padding: 20px;
+  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
   text-align: left;
@@ -132,7 +132,7 @@ h1 { margin: 0px; height: 91px; }
 
 #supportedcurrencies {
   line-height: 20px;
-    padding: 12px 12px 0;
+  padding: 12px 12px 0;
   text-align: justify;
 }
 
@@ -161,22 +161,22 @@ h1 { margin: 0px; height: 91px; }
 #paperarea .keyarea { border: 1px solid #BFBFBF; border-top: 0; }
 #paperarea .keyarea.art { display: block; height: auto; border: 0; font-family: Ubuntu, Arial; padding: 0; margin: 0; }
 #paperarea .artwallet .papersvg { width: 1004px; height: 426px; border: 0; margin: 0; padding: 0; left: 0; }
-#paperarea .artwallet .qrcode_public { top: 112px; left: 170px; z-index: 100; margin: 0; float: none; display: block; position: absolute; background-color: #FFFFFF;
-                                    padding: 5px 5px 2px 5px; }
+#paperarea .artwallet .qrcode_public { top: 263px; left: 780px; z-index: 100; margin: 0; float: none; display: block; position: absolute; background-color: #FFFFFF;
+  padding: 5px 5px 2px 5px; }
 #paperarea .artwallet .qrcode_private { top: 37px; right: 446px; z-index: 100; margin: 0; float: none; display: block; position: absolute; background-color: #FFFFFF;
-                                    padding: 5px 5px 2px 5px;
-                                    -ms-transform: rotate(180deg); /* IE 9 */
-                    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
-                    transform: rotate(180deg);
-                                     }
+  padding: 5px 5px 2px 5px;
+  -ms-transform: rotate(180deg); /* IE 9 */
+  -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+  transform: rotate(180deg);
+}
 .supportWalletGenerator { margin: 30px; }
 .errorMsg { color: red; text-align: center !important; width: 100% !important; padding-top: 15px !important; }
 #paperarea .artwallet .btcaddress
 {
   position: absolute; bottom: 88px; left: 874px; z-index: 100; font-size: 11px; background-color: transparent;
   font-weight: 100; color: #000000; margin: 0; width: 124px; height: 32px; text-align: center;
-    word-wrap: break-word; font-family: Courier, monospace;
-    -ms-transform: rotate(-90deg); /* IE 9 */
+  word-wrap: break-word; font-family: Courier, monospace;
+  -ms-transform: rotate(-90deg); /* IE 9 */
   -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
   transform: rotate(-90deg); font-family: Courier, monospace;
 }
@@ -184,11 +184,11 @@ h1 { margin: 0px; height: 91px; }
 {
   position: absolute; top: 86px; right: 540px; z-index: 100; font-size: 11px; background-color: transparent;
   font-weight: 100; color: #000000; margin: 0; width: 124px; height: 32px; text-align: center;
-    word-wrap: break-word;
+  word-wrap: break-word;
   -ms-transform: rotate(90deg); /* IE 9 */
   -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
   transform: rotate(90deg);
-    font-family: Courier, monospace;
+  font-family: Courier, monospace;
 }
 #paperarea .artwallet .btcencryptedkey
 {
@@ -278,7 +278,7 @@ h1 { margin: 0px; height: 91px; }
   #tagline { margin: 0 0 15px 0; font-style: italic; text-align: left; }
   .menu { text-align: left; }
   .menu .tab { border-top-left-radius: 5px; border-top-right-radius: 5px; display: inline-block; background-color: #F5F5F5;
-          border: 1px solid #BFBFBF; padding: 5px; margin: 0 2px 0 0; position: relative; top: 1px; z-index: 110; cursor: pointer; }
+    border: 1px solid #BFBFBF; padding: 5px; margin: 0 2px 0 0; position: relative; top: 1px; z-index: 110; cursor: pointer; }
   .menu .tab:hover { color: #d58424; }
   .menu .tab.selected { background-color: #FFF; border-bottom: 1px solid #FFF; cursor: default; }
   .menu .tab.selected:hover { color: #000; }
@@ -291,10 +291,10 @@ h1 { margin: 0px; height: 91px; }
   .commands span.right { float: right; }
   .expandable { padding: 10px 15px; text-align: left; cursor: pointer; }
 
-    #menu { visibility: hidden; font-size: 90%; }
-    #culturemenu { text-align: right; padding: 0 20px; font-size: 14px; margin-bottom: 35px; }
-    #culturemenu span { padding: 3px; }
-    #culturemenu .selected { text-decoration: none; color: #000000; }
+  #menu { visibility: hidden; font-size: 90%; }
+  #culturemenu { text-align: right; padding: 0 20px; font-size: 14px; margin-bottom: 35px; visibility: hidden;}
+  #culturemenu span { padding: 3px; }
+  #culturemenu .selected { text-decoration: none; color: #000000; }
 
   #braincommands .row .label { width: 200px; display: inline-block; }
   #braincommands .notes { font-size: 80%; display: block; padding: 5px 10px; }
@@ -341,5 +341,5 @@ h1 { margin: 0px; height: 91px; }
   #currency { display: none; }
   #paperarea .artwallet .btcaddress, #paperarea .artwallet .btcprivwif { z-index: 999; }
   .paperWalletText { z-index: 999;}
-    .dogeTag { display: none; }
+  .dogeTag { display: none; }
 }

@@ -20,20 +20,20 @@
 		var pad = message.pop();
 		if (pad == 0) {
 			throw new Error("Invalid zero-length padding specified for " + alg
-			+ ". Wrong cipher specification or key used?");
+							+ ". Wrong cipher specification or key used?");
 		}
 		var maxPad = cipher._blocksize * 4;
 		if (pad > maxPad) {
 			throw new Error("Invalid padding length of " + pad
-			+ " specified for " + alg
-			+ ". Wrong cipher specification or key used?");
+							+ " specified for " + alg
+							+ ". Wrong cipher specification or key used?");
 		}
 		for (var i = 1; i < pad; i++) {
 			var b = message.pop();
 			if (padding != undefined && padding != b) {
 				throw new Error("Invalid padding byte of 0x" + b.toString(16)
-				+ " specified for " + alg
-				+ ". Wrong cipher specification or key used?");
+								+ " specified for " + alg
+								+ ". Wrong cipher specification or key used?");
 			}
 		}
 	};
@@ -176,9 +176,9 @@
 
 	/**
 	* Electronic Code Book mode.
-	* 
+	*
 	* ECB applies the cipher directly against each block of the input.
-	* 
+	*
 	* ECB does not require an initialization vector.
 	*/
 	var ECB = C_mode.ECB = function () {
@@ -213,7 +213,7 @@
 
 	/**
 	* Cipher block chaining
-	* 
+	*
 	* The first block is XORed with the IV. Subsequent blocks are XOR with the
 	* previous cipher output.
 	*/
@@ -267,11 +267,11 @@
 
 	/**
 	* Cipher feed back
-	* 
+	*
 	* The cipher output is XORed with the plain text to produce the cipher output,
 	* which is then fed back into the cipher to produce a bit pattern to XOR the
 	* next block with.
-	* 
+	*
 	* This is a stream cipher mode and does not require padding.
 	*/
 	var CFB = C_mode.CFB = function () {
@@ -288,7 +288,7 @@
 	// Concrete steps for Mode template
 	CFB_prototype._doEncrypt = function (cipher, m, iv) {
 		var blockSizeInBytes = cipher._blocksize * 4,
-    keystream = iv.slice(0);
+			keystream = iv.slice(0);
 
 		// Encrypt each byte
 		for (var i = 0; i < m.length; i++) {
@@ -319,10 +319,10 @@
 
 	/**
 	* Output feed back
-	* 
+	*
 	* The cipher repeatedly encrypts its own output. The output is XORed with the
 	* plain text to produce the cipher text.
-	* 
+	*
 	* This is a stream cipher mode and does not require padding.
 	*/
 	var OFB = C_mode.OFB = function () {

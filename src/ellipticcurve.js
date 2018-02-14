@@ -3,7 +3,7 @@
 * Basic Javascript Elliptic Curve implementation
 * Ported loosely from BouncyCastle's Java EC code
 * Only Fp curves implemented for now
-* 
+*
 * Copyright Tom Wu, bitaddress.org  BSD License.
 * http://www-cs-students.stanford.edu/~tjw/jsbn/LICENSE
 */
@@ -64,7 +64,7 @@
 	/**
 	* return a sqrt root - the routine verifies that the calculation
 	* returns the right value - if none exists it returns null.
-	* 
+	*
 	* Copyright (c) 2000 - 2011 The Legion Of The Bouncy Castle (http://www.bouncycastle.org)
 	* Ported to JavaScript by bitaddress.org
 	*/
@@ -353,7 +353,7 @@
 		var len = 32; // integerToBytes will zero pad if integer is less than 32 bytes. 32 bytes length is required by the Bitcoin protocol.
 		var enc = ec.integerToBytes(x, len);
 
-		// when compressed prepend byte depending if y point is even or odd 
+		// when compressed prepend byte depending if y point is even or odd
 		if (compressed) {
 			if (y.isEven()) {
 				enc.unshift(0x02);
@@ -570,8 +570,8 @@
 				var yHex = s.substr(len + 2, len);
 
 				return new ec.PointFp(this,
-					this.fromBigInteger(new BigInteger(xHex, 16)),
-					this.fromBigInteger(new BigInteger(yHex, 16)));
+									  this.fromBigInteger(new BigInteger(xHex, 16)),
+									  this.fromBigInteger(new BigInteger(yHex, 16)));
 
 			default: // unsupported
 				return null;
@@ -655,8 +655,8 @@
 			var h = BigInteger.ONE;
 			var curve = new ec.CurveFp(p, a, b);
 			var G = curve.decodePointHex("04"
-					+ "79BE667EF9DCBBAC55A06295CE870B07029BFCDB2DCE28D959F2815B16F81798"
-					+ "483ADA7726A3C4655DA4FBFC0E1108A8FD17B448A68554199C47D08FFB10D4B8");
+										 + "79BE667EF9DCBBAC55A06295CE870B07029BFCDB2DCE28D959F2815B16F81798"
+										 + "483ADA7726A3C4655DA4FBFC0E1108A8FD17B448A68554199C47D08FFB10D4B8");
 			return new ec.X9Parameters(curve, G, n, h);
 		}
 	};

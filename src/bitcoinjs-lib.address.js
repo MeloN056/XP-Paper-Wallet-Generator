@@ -35,9 +35,9 @@ Bitcoin.Address.decodeString = function (string) {
 	var checksum = Crypto.SHA256(Crypto.SHA256(hash, { asBytes: true }), { asBytes: true });
 
 	if (checksum[0] != bytes[21] ||
-			checksum[1] != bytes[22] ||
-			checksum[2] != bytes[23] ||
-			checksum[3] != bytes[24]) {
+		checksum[1] != bytes[22] ||
+		checksum[2] != bytes[23] ||
+		checksum[3] != bytes[24]) {
 		throw "Checksum validation failed!";
 	}
 

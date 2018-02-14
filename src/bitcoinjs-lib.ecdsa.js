@@ -85,11 +85,11 @@ Bitcoin.ECDSA = (function () {
 			var G = ecparams.getG();
 
 			if (r.compareTo(BigInteger.ONE) < 0 ||
-          r.compareTo(n) >= 0)
+				r.compareTo(n) >= 0)
 				return false;
 
 			if (s.compareTo(BigInteger.ONE) < 0 ||
-          s.compareTo(n) >= 0)
+				s.compareTo(n) >= 0)
 				return false;
 
 			var c = s.modInverse(n);
@@ -136,7 +136,7 @@ Bitcoin.ECDSA = (function () {
 		* Parses a byte array containing a DER-encoded signature.
 		*
 		* This function will return an object of the form:
-		* 
+		*
 		* {
 		*   r: BigInteger,
 		*   s: BigInteger
@@ -233,8 +233,8 @@ Bitcoin.ECDSA = (function () {
 
 			// 1.4 Check that nR is at infinity
 			var R = new EllipticCurve.PointFp(curve,
-                            curve.fromBigInteger(x),
-                            curve.fromBigInteger(y));
+											  curve.fromBigInteger(x),
+											  curve.fromBigInteger(y));
 			R.validate();
 
 			// 1.5 Compute e from M

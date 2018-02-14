@@ -31,7 +31,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 				// If number given, swap endian
 				if (n.constructor == Number) {
 					return util.rotl(n, 8) & 0x00FF00FF |
-			    util.rotl(n, 24) & 0xFF00FF00;
+						util.rotl(n, 24) & 0xFF00FF00;
 				}
 
 				// Else, assume array and swap all items
@@ -100,7 +100,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 				for (var bytes = [], i = 0, imod4 = 0; i < base64.length; imod4 = ++i % 4) {
 					if (imod4 == 0) continue;
 					bytes.push(((base64map.indexOf(base64.charAt(i - 1)) & (Math.pow(2, -2 * imod4 + 8) - 1)) << (imod4 * 2)) |
-			        (base64map.indexOf(base64.charAt(i)) >>> (6 - imod4 * 2)));
+							   (base64map.indexOf(base64.charAt(i)) >>> (6 - imod4 * 2)));
 				}
 
 				return bytes;

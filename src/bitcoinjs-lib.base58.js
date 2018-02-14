@@ -51,7 +51,7 @@
 					throw "Invalid character";
 				}
 				bi = bi.add(BigInteger.valueOf(alphaIndex)
-								.multiply(B58.base.pow(input.length - 1 - i)));
+							.multiply(B58.base.pow(input.length - 1 - i)));
 
 				// This counts leading zero bytes
 				if (input[i] == "1") leadingZerosNum++;
