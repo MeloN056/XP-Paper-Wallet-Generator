@@ -113,6 +113,9 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   <script type="text/javascript">
 //jsqrcode.js
   </script>
+  <script type="text/javascript">
+//wallet-background.js
+  </script>
   <style type="text/css">
 //main.css
   </style>
@@ -181,6 +184,16 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         <div id="walletCommands" class="commands">
           <div id="singlecommands" class="row">
             <span><input type="button" id="newaddress" value="Generate New Address" onclick="ninja.wallets.singlewallet.generateNewAddressAndKey();" /></span>
+            <span>Background Picture <select name="images" id="changeimage" onChange="changeImage();">
+				<option value="69_winner">Winner - たかおぱみゅぱみゅ</option>
+				<option value="04_second_prize">Second Prize - 猫内</option>
+				<option value="18_third_prize">Third Prize - Pencil-4B</option>
+				<option value="11_BitBender_award">BitBender Award 1 - Fune/絹谷ゆたか</option>
+				<option value="39_BitBender_award">BitBender Award 2 - りんご5g</option>
+				<option value="37_XP.market_award">XP.Market Award 1 - bobu_oshida</option>
+				<option value="54_XP.Market_award">XP.Market Award 2 - 中田瑠美</option>
+				<option value="WALLETBLANK">Default</option>
+            </select></span>
             <span class="print"><input type="button" name="print" value="Print" id="singleprint" onclick="window.print();" /></span>
           </div>
         </div>

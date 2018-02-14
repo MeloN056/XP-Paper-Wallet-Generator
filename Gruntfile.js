@@ -37,6 +37,7 @@ module.exports = function (grunt) {
           {token: "//ninja.detailwallet.js", file: "./src/ninja.detailwallet.js"},
           {token: "//ninja.donatetab.js", file: "./src/ninja.donatetab.js"},
           {token: "//qrcode.js", file: "./src/qrcode.js"},
+          {token: "//wallet-background.js", file: "./src/wallet-background.js"},
           {token: "//securerandom.js", file: "./src/securerandom.js"},
           {token: "//janin.currency.js", file: "./src/janin.currency.js"},
           {token: "//main.css", file: "./src/main.css"}
