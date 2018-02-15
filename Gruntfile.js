@@ -48,14 +48,6 @@ module.exports = function (grunt) {
         output: "./index.html",
         tokens: [
           {token: "//en.js", file: "./l10n/en.js"},
-          {token: "//fr.js", file: "./l10n/fr.js"},
-          {token: "//de.js", file: "./l10n/de.js"},
-          {token: "//nl.js", file: "./l10n/nl.js"},
-          {token: "//ru.js", file: "./l10n/ru.js"},
-          {token: "//es.js", file: "./l10n/es.js"},
-          {token: "//ua.js", file: "./l10n/ua.js"},
-          {token: "//tr.js", file: "./l10n/tr.js"},
-          {token: "//it.js", file: "./l10n/it.js"},
           {token: "//ja.js", file: "./l10n/ja.js"}
         ]
       }
