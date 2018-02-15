@@ -62,13 +62,5 @@ ninja.translator = {
 	translations: {
 		//en.js
         //ja.js
-		//fr.js
-		//de.js
-		//nl.js
-		//ru.js
-		//es.js
-		//it.js
-		//ua.js
-		//tr.js
 	}
 };
