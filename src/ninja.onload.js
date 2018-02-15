@@ -4,23 +4,23 @@ if (ninja.getQueryString()["culture"] != undefined) {
 } else {
 	ninja.translator.autodetectTranslation();
 }
-if (ninja.getQueryString()["showseedpool"] == "true" || ninja.getQueryString()["showseedpool"] == "1") {
+/*if (ninja.getQueryString()["showseedpool"] == "true" || ninja.getQueryString()["showseedpool"] == "1") {
 	document.getElementById("seedpoolarea").style.display = "block";
-}
+}*/
 // change currency
-var currency = ninja.getQueryString()["currency"] || "bitcoin";
+/*var currency = ninja.getQueryString()["currency"] || "bitcoin";
 currency = currency.toLowerCase();
 for(i = 0; i < janin.currencies.length; i++) {
 	if (janin.currencies[i].name.toLowerCase() == currency)
 		janin.currency.useCurrency(i);
-}
+}*/
 // Reset title if no currency is choosen
-if(ninja.getQueryString()["currency"] == null) {
+/*if(ninja.getQueryString()["currency"] == null) {
 	document.title = ninja.translator.get("defaultTitle");
 	document.getElementById("siteTitle").alt = ninja.translator.get("defaultTitle");
-}
+}*/
 // populate currency dropdown list
-var select = document.getElementById("currency");
+/*var select = document.getElementById("currency");
 var options = "";
 for(i = 0; i < janin.currencies.length; i++) {
 	options += "<option value='"+i+"'";
@@ -28,9 +28,9 @@ for(i = 0; i < janin.currencies.length; i++) {
 		options += " selected='selected'";
 	options += ">"+janin.currencies[i].name+"</option>";
 }
-select.innerHTML = options;
+select.innerHTML = options;*/
 // populate supported currency list
-var supportedcurrencies = document.getElementById("supportedcurrencies");
+/*var supportedcurrencies = document.getElementById("supportedcurrencies");
 var currencieslist = "";
 j = 0;
 for(i = 0; i < janin.currencies.length; i++) {
@@ -43,9 +43,9 @@ for(i = 0; i < janin.currencies.length; i++) {
 	j++;
 }
 supportedcurrencies.innerHTML = currencieslist;
-document.getElementById("supportedcurrenciescounter").innerHTML = j.toString() + " ";
+document.getElementById("supportedcurrenciescounter").innerHTML = j.toString() + " ";*/
 // populate donate list
-document.getElementById("donateqrcode").style.display = "none";
+/*document.getElementById("donateqrcode").style.display = "none";
 var donatelist = document.getElementById("donatelist");
 var list = "<table>";
 for(i = 0; i < janin.currencies.length; i++) {
@@ -57,7 +57,7 @@ for(i = 0; i < janin.currencies.length; i++) {
 	list += janin.currencies[i].donate+"</a></td></tr>";
 }
 list += "</table>";
-donatelist.innerHTML = list;
+donatelist.innerHTML = list;*/
 
 // run unit tests
 if (ninja.getQueryString()["unittests"] == "true" || ninja.getQueryString()["unittests"] == "1") {
@@ -113,5 +113,5 @@ function cleani18n(string) {
 		.replace(/"/g, '\\"');
 }
 
-ninja.envSecurityCheck();
-ninja.browserSecurityCheck();
+//ninja.envSecurityCheck();
+//ninja.browserSecurityCheck();
