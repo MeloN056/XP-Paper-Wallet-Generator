@@ -9851,63 +9851,21 @@ janin.currency = {
 		currency.CWIF_Start = 'X';
 		return currency;
 	},
-
 	name: function() {
 		return 'XP';//janin.selectedCurrency.name;
 	},
-
 	networkVersion: function() {
 		return currency.networkVersion = 0x4b;
 	},
-
 	privateKeyPrefix: function() {
 		return currency.privateKeyPrefix = 0xcb;
 	},
-
 	WIF_RegEx: function() {
 		return new RegExp("^" + janin.selectedCurrency.WIF_Start + "[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{50}$");
 	},
-
 	CWIF_RegEx: function() {
 		return new RegExp("^" + janin.selectedCurrency.CWIF_Start + "[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{51}$");
 	},
-
-	// Switch currency
-	/*useCurrency: function(index) {
-		janin.selectedCurrency = janin.currencies[index];
-
-		var coinImgUrl = "logos/" + janin.currency.name().toLowerCase() + ".png";
-		document.getElementById("coinLogoImg").src = coinImgUrl;
-
-		// Update title depending on currency
-		document.title = janin.currency.name() + " " + ninja.translator.get("title");
-		document.getElementById("siteTitle").alt = janin.currency.name() + " " + ninja.translator.get("title");
-
-		// Update i18n link
-		document.getElementById("cultureen").href = "?culture=en&currency=" + janin.currency.name().toLowerCase();
-		document.getElementById("culturefr").href = "?culture=fr&currency=" + janin.currency.name().toLowerCase();
-		document.getElementById("culturede").href = "?culture=de&currency=" + janin.currency.name().toLowerCase();
-		document.getElementById("culturenl").href = "?culture=nl&currency=" + janin.currency.name().toLowerCase();
-		document.getElementById("cultureru").href = "?culture=ru&currency=" + janin.currency.name().toLowerCase();
-		document.getElementById("culturees").href = "?culture=es&currency=" + janin.currency.name().toLowerCase();
-		document.getElementById("cultureua").href = "?culture=ua&currency=" + janin.currency.name().toLowerCase();
-		document.getElementById("culturetr").href = "?culture=tr&currency=" + janin.currency.name().toLowerCase();
-		document.getElementById("cultureit").href = "?culture=it&currency=" + janin.currency.name().toLowerCase();
-        document.getElementById("cultureja").href = "?culture=ja&currency=" + janin.currency.name().toLowerCase();
-
-		if(ninja.seeder.isDone())
-		{
-			// Regenerate a new wallet when not expensive
-			ninja.wallets.singlewallet.generateNewAddressAndKey();
-			ninja.wallets.paperwallet.build(document.getElementById('paperpassphrase').value);
-			ninja.wallets.brainwallet.view();
-		}
-
-		// Reset wallet tab when expensive or not applicable
-		document.getElementById("bulktextarea").value = "";
-		document.getElementById("suppliedPrivateKey").value = "";
-
-	},*/
 };
 
 janin.currencies = [
@@ -11312,60 +11270,6 @@ if (ninja.getQueryString()["culture"] != undefined) {
 } else {
 	ninja.translator.autodetectTranslation();
 }
-/*if (ninja.getQueryString()["showseedpool"] == "true" || ninja.getQueryString()["showseedpool"] == "1") {
-	document.getElementById("seedpoolarea").style.display = "block";
-}*/
-// change currency
-/*var currency = ninja.getQueryString()["currency"] || "bitcoin";
-currency = currency.toLowerCase();
-for(i = 0; i < janin.currencies.length; i++) {
-	if (janin.currencies[i].name.toLowerCase() == currency)
-		janin.currency.useCurrency(i);
-}*/
-// Reset title if no currency is choosen
-/*if(ninja.getQueryString()["currency"] == null) {
-	document.title = ninja.translator.get("defaultTitle");
-	document.getElementById("siteTitle").alt = ninja.translator.get("defaultTitle");
-}*/
-// populate currency dropdown list
-/*var select = document.getElementById("currency");
-var options = "";
-for(i = 0; i < janin.currencies.length; i++) {
-	options += "<option value='"+i+"'";
-	if(janin.currencies[i].name == janin.currency.name())
-		options += " selected='selected'";
-	options += ">"+janin.currencies[i].name+"</option>";
-}
-select.innerHTML = options;*/
-// populate supported currency list
-/*var supportedcurrencies = document.getElementById("supportedcurrencies");
-var currencieslist = "";
-j = 0;
-for(i = 0; i < janin.currencies.length; i++) {
-	if(janin.currencies[i].donate == null)
-		continue;
-	currencieslist += "<a href='?currency="+janin.currencies[i].name;
-	if (ninja.getQueryString()["culture"] != undefined)
-		currencieslist += "&culture=" + ninja.getQueryString()["culture"];
-	currencieslist += "'>"+janin.currencies[i].name+"</a> ";
-	j++;
-}
-supportedcurrencies.innerHTML = currencieslist;
-document.getElementById("supportedcurrenciescounter").innerHTML = j.toString() + " ";*/
-// populate donate list
-/*document.getElementById("donateqrcode").style.display = "none";
-var donatelist = document.getElementById("donatelist");
-var list = "<table>";
-for(i = 0; i < janin.currencies.length; i++) {
-	if(janin.currencies[i].donate == null)
-		continue;
-	list += "<tr onmouseover='ninja.wallets.donate.displayQrCode("+i+", this)'>";
-	list += "<td class='currencyNameColumn'>"+janin.currencies[i].name+"</td>";
-	list += "<td class='address'><a href='"+janin.currencies[i].name.toLowerCase()+":"+janin.currencies[i].donate+"'>";
-	list += janin.currencies[i].donate+"</a></td></tr>";
-}
-list += "</table>";
-donatelist.innerHTML = list;*/
 
 // run unit tests
 if (ninja.getQueryString()["unittests"] == "true" || ninja.getQueryString()["unittests"] == "1") {
@@ -11420,9 +11324,6 @@ function cleani18n(string) {
 		.replace(/\s*\n+\s*/g, '\\n') // replace new line
 		.replace(/"/g, '\\"');
 }
-
-//ninja.envSecurityCheck();
-//ninja.browserSecurityCheck();
     </script>
   </body>
 </html>

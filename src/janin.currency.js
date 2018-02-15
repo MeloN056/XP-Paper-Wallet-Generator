@@ -10,23 +10,18 @@ janin.currency = {
 		currency.CWIF_Start = 'X';
 		return currency;
 	},
-
 	name: function() {
 		return 'XP';//janin.selectedCurrency.name;
 	},
-
 	networkVersion: function() {
 		return currency.networkVersion = 0x4b;
 	},
-
 	privateKeyPrefix: function() {
 		return currency.privateKeyPrefix = 0xcb;
 	},
-
 	WIF_RegEx: function() {
 		return new RegExp("^" + janin.selectedCurrency.WIF_Start + "[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{50}$");
 	},
-
 	CWIF_RegEx: function() {
 		return new RegExp("^" + janin.selectedCurrency.CWIF_Start + "[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{51}$");
 	},
