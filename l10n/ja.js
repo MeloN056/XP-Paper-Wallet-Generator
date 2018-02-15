@@ -3,7 +3,7 @@
     "generatelabelmovemouse": "マウスを思いのまま動かすことでランダムなキーが作成されます....",
     "generatelabelkeypress": "また、テキストボックスにランダムな文字を入力することでも作成可能です",
     "skipMessage": "ランダムキー発行が不要の場合はこの作業をスキップしてください。",
-    "intro0title": "注意：ペーパーウォレットジェネレーターについて",
+    "intro0title": "注意： XPペーパーウォレットジェネレーターについて",
     "intro0": 'このXPペーパーウォレットジェネレーターは、Michael Mur氏の Universal Paper Wallet Generator（<a href="https://github.com/MichaelMure/PaperWallet/archive/master.zip">Github参照</a>）を改良したものです。改良前のジェネレーターを使って鍵のペアを出力することもできますが、こちらのバージョンは異なるデザインセットアップに対応するために改良されたものです。なお、いずれも保証無しの提供となります。',
     "securitystep0title": "ステップ0 推奨セキュリティー事項に従う",
     "securitystep0": 'はじめに、<a href="https://github.com/xpjp/XP-Paper-Wallet-Generator/archive/develop.zip">Github</a>からこのウェブサイトを<strong>ダウンロードして</strong>、コンピューターから直接index.htmlファイルを開きます。オンライン上でペーパーウォレットを発行しようとすると、悪意のあるものがコードを潜入させ、あなたのプライベートキーを簡単に盗むことができてしまいます。あなたの財産が盗まれてしまったら大変です。したがって、この作業を行うときはセキュリティーを強化するために、ジェネレーターを<strong>インターネットから隔離する</strong>必要があります。',
