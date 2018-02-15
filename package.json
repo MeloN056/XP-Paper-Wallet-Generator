@@ -3,8 +3,9 @@
   "version": "3.3.0",
   "description": "Open Source JavaScript Client-Side Bitcoin Wallet Generator",
   "main": "Gruntfile.js",
-  "dependencies": {
+  "devDependencies": {
     "grunt": "~0.4.1",
+    "grunt-cli": "^1.2.0",
     "grunt-combine": "~0.8.3",
     "grunt-lineending": "~0.2.4"
   },
@@ -20,5 +21,8 @@
   "readmeFilename": "README.md",
   "bugs": {
     "url": "https://github.com/MichaelMure/WalletGenerator.net/issues"
+  },
+  "scripts": {
+    "build": "grunt"
   }
 }
